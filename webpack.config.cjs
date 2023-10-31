@@ -40,6 +40,12 @@ module.exports = {
                 use: 'ts-loader', // Используйте ts-loader для обработки TypeScript файлов
                 exclude: /node_modules/,
             }
-          ],
-    }
+        ],
+    },
+    devServer: {
+        open: true,
+        liveReload: true,
+        static: path.resolve(__dirname, './src'),
+    },
+    target: 'web',
 };
