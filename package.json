@@ -5,15 +5,27 @@
   "main": "index.js",
   "scripts": {
     "build:prod": "npx webpack --mode=production",
-    "build:dev": "npx webpack --mode=development"
+    "build:dev": "npx webpack --mode=development",
+    "start:server": "npx webpack serve",
+    "format": "node ./node_modules/prettier/bin/prettier.cjs --check --config ./prettier.json ./src/index.js --log-level warn --write",
+    "lint:check": "npx eslint ./src",
+    "lint:fix": "npx eslint ./src/ --fix"
   },
   "author": "Zangiev Movsar",
   "license": "ISC",
   "devDependencies": {
     "css-loader": "^6.8.1",
+    "eslint": "^8.52.0",
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-formatter-codeframe": "^7.32.1",
+    "eslint-plugin-import": "^2.29.0",
+    "eslint-plugin-jsx-a11y": "^6.8.0",
+    "eslint-plugin-react": "^7.33.2",
+    "eslint-plugin-react-hooks": "^4.6.0",
     "html-inline-css-webpack-plugin": "^1.11.2",
     "html-webpack-plugin": "^5.5.3",
     "mini-css-extract-plugin": "^2.7.6",
+    "prettier": "^3.0.3",
     "style-loader": "^3.3.3",
     "ts-loader": "^9.5.0",
     "typescript": "^5.2.2",
@@ -22,5 +34,6 @@
   },
   "dependencies": {
     "webpack-dev-server": "^4.15.1"
-  }
+  },
+  "browserslist": "> 1%, not dead"
 }
