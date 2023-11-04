@@ -9,7 +9,8 @@
     "start:server": "npx webpack serve",
     "format": "node ./node_modules/prettier/bin/prettier.cjs --check --config ./prettier.json ./src/index.js --log-level warn --write",
     "lint:check": "npx eslint ./src",
-    "lint:fix": "npx eslint ./src/ --fix"
+    "lint:fix": "npx eslint ./src/ --fix",
+    "prepare": "husky install"
   },
   "author": "Zangiev Movsar",
   "license": "ISC",
@@ -24,6 +25,7 @@
     "eslint-plugin-react-hooks": "^4.6.0",
     "html-inline-css-webpack-plugin": "^1.11.2",
     "html-webpack-plugin": "^5.5.3",
+    "husky": "^8.0.3",
     "mini-css-extract-plugin": "^2.7.6",
     "prettier": "^3.0.3",
     "style-loader": "^3.3.3",
