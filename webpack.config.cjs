@@ -6,15 +6,15 @@ const HTMLInlineCSSWebpackPlugin = require("html-inline-css-webpack-plugin").def
 
 
 module.exports = {
-    entry: './src/index.ts', // Ваш входной файл
+    entry: './src/index.js', // Ваш входной файл. До 13 окт был index.ts - если надо меняй
     output: {
         path: path.resolve(__dirname, 'dist'), // Путь к папке, где будет сохраняться сборка
         filename: "bungle.js", // Название выходного файла
         clean: true // Очищать папку dist перед каждой новой сборкой
     },
-    //mode: "development", // Режим разработки, оптимизированный для разработки
+    mode: "development", // Режим разработки, оптимизированный для разработки
     //devtool: "source-map" // Используйте source-map для более качественных карт исходных файлов
-    mode: "production",
+    //mode: "production",
     plugins: [ 
         new HtmlWebpackPlugin({
             filename:"./index.html", // Название создаваемого HTML файла и его путь
